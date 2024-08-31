@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Taking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Assessment Title and Instructions -->
+        <h1 id="assessment-title">Sample Assessment Title</h1>
+        <p id="assessment-instructions">Please answer all the questions. Make sure to review your answers before submitting.</p>
+
+        <!-- Timer Display -->
+        <div class="timer" id="timer">
+            Time Remaining: <span id="time-left">30:00</span>
+        </div>
+
+        <!-- Question Navigation -->
+        <div class="question-navigation">
+            <button class="nav-btn" onclick="navigateToQuestion(1)">1</button>
+            <button class="nav-btn" onclick="navigateToQuestion(2)">2</button>
+            <button class="nav-btn" onclick="navigateToQuestion(3)">3</button>
+            <!-- Add more buttons as needed -->
+        </div>
+
+        <!-- Question Display -->
+        <div class="question-display" id="question-display">
+            <h2>Question 1</h2>
+            <p>What is the capital of France?</p>
+            <img src="paris.jpg" alt="Paris" class="question-image">
+        </div>
+
+        <!-- Answer Input Fields -->
+        <div class="answer-input">
+            <label for="answer">Your Answer:</label>
+            <input type="text" id="answer" name="answer">
+        </div>
+
+        <!-- Save Progress Button -->
+        <div class="form-group">
+            <button id="save-progress-btn" onclick="saveProgress()">Save Progress</button>
+        </div>
+
+        <!-- Submit Assessment Button -->
+        <div class="form-group">
+            <button id="submit-assessment-btn" onclick="submitAssessment()">Submit Assessment</button>
+        </div>
+
+        <!-- Feedback Display (If Immediate Feedback is Enabled) -->
+        <div class="feedback-display" id="feedback-display" style="display:none;">
+            <h3>Feedback</h3>
+            <p id="feedback">Correct! The capital of France is Paris.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
